@@ -1,0 +1,298 @@
+@media only screen and (max-width: 600px) {
+    #title h1 {
+        font-size: 15vmin;
+        text-align: center;
+    }
+    #title h2 {
+        font-size: 10vmin;
+        text-align: center;
+    }
+
+    .quote h2, cite {
+        font-size: 8vmax;
+    }
+
+    .inner-text {
+        font-size: 20vmax;
+        top: -245vw;
+        left: 27vw;
+    }
+    .inner-spacing {
+        margin-bottom: 59vw;
+        margin-right: 25vw;
+    }
+
+    #chart {
+        margin-top: -180vmax;
+    }
+
+    #links p {
+      font-size: 5vmin;
+    }
+
+    .fa-ul {
+        font-size: 10vmin;
+    }
+
+    #creator img {
+      height: 15vmin;
+      width: 15vmin;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+  #title h1 {
+      font-size: 15vmin;
+      text-align: center;
+  }
+  #title h2 {
+      font-size: 10vmin;
+      text-align: center;
+  }
+
+  #about p {
+      font-size: 2.5vmin;
+  }
+
+  .quote h2, cite {
+      font-size: 7vmin;
+  }
+
+    .inner-text {
+        font-size: 3vmax;
+        left: 10vw;
+        top: -16vw;
+    }
+    .inner-spacing {
+        margin-right: 22vw;
+    }
+
+    #links p {
+      font-size: 2vmin;
+    }
+
+    .fa-ul {
+      font-size: 2.8vmin;
+    }
+
+    #creator img {
+      height: 8vmin;
+      width: 8vmin;
+      margin-bottom: -5vmin;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #title h1 {
+        font-size: 13vmin;
+        text-align: center;
+      }
+
+      #title h2 {
+        font-size: 7vmin;
+        text-align: center;
+      }
+
+      .quote h2, cite {
+          font-size: 6vmin;
+      }
+
+    .inner-text {
+        font-size: 5vmax;
+        top: -17vw;
+    }
+    .inner-spacing {
+        margin-right: 20vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+  #title h1 {
+      text-align: left;
+    }
+
+    #title h2 {
+      text-align: right;
+    }
+
+    .quote h2 {
+        margin-top: 12vmin;
+    }
+
+    .quote h2, cite {
+        font-size: 7vmin;
+    }
+
+    .inner-text {
+        left: 8vw;
+        top: -15vmax;
+    }
+    .inner-spacing {
+        margin-right: 16vw;
+    }
+
+    #links p {
+      font-size: 3vmin;
+    }
+
+    .fa-ul {
+      font-size: 3.8vmin;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+  #title h1 {
+      font-size: 9vmin;
+    }
+
+    #title h2 {
+      font-size: 7vmin;
+    }
+
+    #about p {
+        font-size: 1.8vmin;
+    }
+
+    .quote h2 {
+        margin-top: 10vmin;
+    }
+
+    .quote h2, cite {
+        font-size: 5vmin;
+    }
+
+    .inner-spacing {
+        margin-right: 15vw;
+    }
+
+    .brand-logo img {
+        margin-top: 2%;
+        height: 50px;
+        width: 10%;
+    }
+
+    #footer-social {
+        float: right;
+    }
+
+    #creator img {
+      margin-bottom: -3vmin;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+  #title h1 {
+      font-size: 8vmin;
+    }
+
+    #title h2 {
+      font-size: 6vmin;
+    }
+
+    .inner-text {
+        font-size: 4vmax;
+        left: 5vw;
+        top: -11.5vmax;
+    }
+    .inner-spacing {
+        margin-right: 11vw;
+    }
+
+    #links p {
+      font-size: 2.5vmin;
+    }
+}
+
+
+
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+
+/* Used inherit to stop icons from turning blue because of the link assignment*/
+
+.icon-block a, #footer-social a, .card a {
+    color: inherit;
+}
+
+#title h1, #title h2, nav a:link {
+  color: #000000;
+}
+
+#title h1 {
+    font-weight: 700;
+}
+
+nav i {
+    margin-left: -30vmin;
+}
+
+#normal-nav li {
+    font-weight: 700;
+    font-size: 3vmin;
+}
+
+.side-nav {
+  background-color: #000000;
+}
+
+.side-nav li {
+    color: #FFFFFF;
+}
+
+#title .fa-circle {
+    color: #262626;
+    opacity: 0.7;
+}
+
+#title img {
+    opacity: 0.8;
+}
+
+#title h2, #title h4, #about h3, cite, #projects h1, #stats h1, .quote h2, footer h3, footer h5, footer {
+    font-weight: 600;
+}
+
+#about p {
+    font-weight: 400;
+}
+
+.quote-img img {
+    opacity: 0.5;
+}
+
+.inner-text {
+    display: inline-block;
+    position: relative;
+}
+
+table {
+  background-color: #000000;
+  color: #F5F5F5;
+}
+
+#projects .card {
+    font-weight: 400;
+}
+
+#projects img {
+  height: 200px;
+}
+
+#delegate img {
+  width: 800px;
+}
+
+#pylisk img {
+  width: 500px;
+}
+
+#lremotemon img {
+  width: 400px;
+}
+
+footer h3, footer h5 {
+    color: #9e9e9e;
+}
