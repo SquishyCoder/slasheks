@@ -7,11 +7,9 @@
         font-size: 10vmin;
         text-align: center;
     }
-
     .quote h2, cite {
         font-size: 8vmax;
     }
-
     .inner-text {
         font-size: 20vmax;
         top: -245vw;
@@ -21,43 +19,42 @@
         margin-bottom: 59vw;
         margin-right: 25vw;
     }
-
     #chart {
         margin-top: -180vmax;
     }
-
     #links p {
-      font-size: 5vmin;
+        font-size: 5vmin;
     }
-
     .fa-ul {
         font-size: 10vmin;
     }
-
+    #lisk2 {
+        height: 15vmax;
+        width: 13vmax;
+        top: -55vmax;
+        left: 15px;
+    }
     #creator img {
-      height: 15vmin;
-      width: 15vmin;
+        height: 15vmin;
+        width: 15vmin;
     }
 }
 
 @media only screen and (min-width: 601px) {
-  #title h1 {
-      font-size: 15vmin;
-      text-align: center;
-  }
-  #title h2 {
-      font-size: 10vmin;
-      text-align: center;
-  }
-
-  #about p {
-      font-size: 2.5vmin;
-  }
-
-  .quote h2, cite {
-      font-size: 7vmin;
-  }
-
+    #title h1 {
+        font-size: 15vmin;
+        text-align: center;
+    }
+    #title h2 {
+        font-size: 10vmin;
+        text-align: center;
+    }
+    #about p {
+        font-size: 2.5vmin;
+    }
+    .quote h2, cite {
+        font-size: 7vmin;
+    }
     .inner-text {
         font-size: 3vmax;
         left: 10vw;
@@ -66,19 +63,22 @@
     .inner-spacing {
         margin-right: 22vw;
     }
-
     #links p {
-      font-size: 2vmin;
+        font-size: 2vmin;
     }
-
     .fa-ul {
-      font-size: 2.8vmin;
+        font-size: 2.8vmin;
     }
-
+    #lisk2 {
+        height: 5vmax;
+        width: 4vmax;
+        top: -130px;
+        left: 5px;
+    }
     #creator img {
-      height: 8vmin;
-      width: 8vmin;
-      margin-bottom: -5vmin;
+        height: 8vmin;
+        width: 8vmin;
+        margin-bottom: -5vmin;
     }
 }
 
@@ -86,17 +86,14 @@
     #title h1 {
         font-size: 13vmin;
         text-align: center;
-      }
-
-      #title h2 {
+    }
+    #title h2 {
         font-size: 7vmin;
         text-align: center;
-      }
-
-      .quote h2, cite {
-          font-size: 6vmin;
-      }
-
+    }
+    .quote h2, cite {
+        font-size: 6vmin;
+    }
     .inner-text {
         font-size: 5vmax;
         top: -17vw;
@@ -107,22 +104,18 @@
 }
 
 @media screen and (min-width: 1024px) {
-  #title h1 {
-      text-align: left;
+    #title h1 {
+        text-align: left;
     }
-
     #title h2 {
-      text-align: right;
+        text-align: right;
     }
-
     .quote h2 {
         margin-top: 12vmin;
     }
-
     .quote h2, cite {
         font-size: 7vmin;
     }
-
     .inner-text {
         left: 8vw;
         top: -15vmax;
@@ -130,65 +123,60 @@
     .inner-spacing {
         margin-right: 16vw;
     }
-
     #links p {
-      font-size: 3vmin;
+        font-size: 3vmin;
     }
-
     .fa-ul {
-      font-size: 3.8vmin;
+        font-size: 3.8vmin;
+    }
+    #lisk2 {
+        height: 50px;
+        width: 40px;
+        top: -22vh;
+        left: 3px;
     }
 }
 
 @media screen and (min-width: 1920px) {
-  #title h1 {
-      font-size: 9vmin;
+    #title h1 {
+        font-size: 9vmin;
     }
-
     #title h2 {
-      font-size: 7vmin;
+        font-size: 7vmin;
     }
-
     #about p {
         font-size: 1.8vmin;
     }
-
     .quote h2 {
         margin-top: 10vmin;
     }
-
     .quote h2, cite {
         font-size: 5vmin;
     }
-
     .inner-spacing {
         margin-right: 15vw;
     }
-
-    .brand-logo img {
-        margin-top: 2%;
-        height: 50px;
-        width: 10%;
-    }
-
     #footer-social {
         float: right;
     }
-
+    #lisk2 {
+        height: 4vmax;
+        width: 3vmax;
+        top: -22vh;
+        left: 10px;
+    }
     #creator img {
-      margin-bottom: -3vmin;
+        margin-bottom: -3vmin;
     }
 }
 
 @media screen and (min-width: 2560px) {
-  #title h1 {
-      font-size: 8vmin;
+    #title h1 {
+        font-size: 8vmin;
     }
-
     #title h2 {
-      font-size: 6vmin;
+        font-size: 6vmin;
     }
-
     .inner-text {
         font-size: 4vmax;
         left: 5vw;
@@ -197,14 +185,10 @@
     .inner-spacing {
         margin-right: 11vw;
     }
-
     #links p {
-      font-size: 2.5vmin;
+        font-size: 2.5vmin;
     }
 }
-
-
-
 
 body {
     font-family: "Josefin Sans", sans-serif;
@@ -218,7 +202,7 @@ body {
 }
 
 #title h1, #title h2, nav a:link {
-  color: #000000;
+    color: #000000;
 }
 
 #title h1 {
@@ -235,7 +219,7 @@ nav i {
 }
 
 .side-nav {
-  background-color: #000000;
+    background-color: #000000;
 }
 
 .side-nav li {
@@ -247,12 +231,23 @@ nav i {
     opacity: 0.7;
 }
 
-#title img {
+#title-img img {
     opacity: 0.8;
 }
 
 #title h2, #title h4, #about h3, cite, #projects h1, #stats h1, .quote h2, footer h3, footer h5, footer {
     font-weight: 600;
+}
+
+.lisk-img {
+    position: relative;
+    z-index: 1;
+}
+
+#lisk1 {
+    height: 70px;
+    width: 60px;
+    top: 10px;
 }
 
 #about p {
@@ -269,8 +264,8 @@ nav i {
 }
 
 table {
-  background-color: #000000;
-  color: #F5F5F5;
+    background-color: #000000;
+    color: #F5F5F5;
 }
 
 #projects .card {
@@ -278,19 +273,19 @@ table {
 }
 
 #projects img {
-  height: 200px;
+    height: 200px;
 }
 
 #delegate img {
-  width: 800px;
+    width: 800px;
 }
 
 #pylisk img {
-  width: 500px;
+    width: 500px;
 }
 
 #lremotemon img {
-  width: 400px;
+    width: 400px;
 }
 
 footer h3, footer h5 {
