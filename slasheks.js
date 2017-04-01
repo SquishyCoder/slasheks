@@ -1,6 +1,17 @@
 $(document).ready(function() {
+  $(window).scroll(function() {
+    if ($(".selected").offset().top > 400) {
+      $(".selected").addClass("scroll-change");
+      $("#normal-nav li").css("border", "1px solid #eceff1");
+    } else {
+      $(".selected").removeClass("scroll-change");
+      $("#normal-nav li").css("border", "");
+    }
+  });
+
   retrieveInfo();
 });
+
 
 var data = [];
 
@@ -37,7 +48,6 @@ function retrieveInfo() {
   });
   }
   setTimeout(function() {
-      //console.log(data.length);
       displayData();
   }, 5000);
 }
