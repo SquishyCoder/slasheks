@@ -40,8 +40,6 @@ function retrieveInfo() {
         var d = new Date((transactions[i].timestamp + 1464109200)*1000);
         var date = d.toDateString();
 
-        console.log(i);
-
         data.push([transactions[i].senderId, transactions[i].recipientId, transactions[i].amount, transactions[i].id, date]);
       }
     }
@@ -49,7 +47,7 @@ function retrieveInfo() {
   }
   setTimeout(function() {
       displayData();
-  }, 5000);
+  }, 1000);
 }
 
 function displayData() {
@@ -65,6 +63,32 @@ function displayData() {
 
     row.append(from, fname, to, toName, amount, id, date);
     $("tbody").append(row);
-    $("tr:odd").css("background-color", "#424242");
   }
+  setTimeout(function() {
+    $("table").tablesorter({
+    theme : "materialize",
+
+    widthFixed: true,
+    widgets : [ "filter", "zebra"],
+
+    widgetOptions : {
+      zebra : ["even", "odd"],
+
+      filter_reset : ".reset",
+
+      filter_cssFilter: ["", "", "browser-default"]
+    }
+  })
+  .tablesorterPager({
+
+    container: $(".ts-pager"),
+
+    cssGoto  : ".pagenum",
+
+    removeRows: false,
+
+    output: '{startRow} - {endRow} / {filteredRows} ({totalRows})'
+
+  });
+  }, 1000);
 }

@@ -278,9 +278,14 @@ nav i {
     position: relative;
 }
 
-table {
-    background-color: #000000;
-    color: #F5F5F5;
+.tablesorter-materialize thead th,
+.tablesorter-materialize tfoot th{
+    background-color: #263238;
+    color: #eceff1;
+}
+
+select {
+  color: #000000;
 }
 
 #projects .card {
