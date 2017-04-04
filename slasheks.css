@@ -1,26 +1,40 @@
 @media only screen and (max-width: 600px) {
+    nav i {
+        margin-left: -10vmin;
+    }
+    nav a:link, #title h1, #title h2 {
+        color: #000000;
+    }
+    #title h1, #title h2 {
+        text-align: center;
+    }
     #title h1 {
         font-size: 15vmin;
-        text-align: center;
     }
     #title h2 {
         font-size: 10vmin;
-        text-align: center;
     }
-    .quote h2, cite {
-        font-size: 8vmax;
+    #title-img {
+        opacity: 0.7;
+    }
+    .quote h2 {
+        font-size: 4vmax;
+        margin-top: 15vmin;
+    }
+    cite {
+        font-size: 2vmax;
     }
     .inner-text {
-        font-size: 20vmax;
-        top: -245vw;
+        font-size: 10vmax;
+        top: -243vw;
         left: 27vw;
     }
     .inner-spacing {
-        margin-bottom: 59vw;
-        margin-right: 25vw;
+        margin-bottom: 63vw;
+        margin-right: 30vw;
     }
     #chart {
-        margin-top: -180vmax;
+        margin-top: -100vmax;
     }
     #links p {
         font-size: 5vmin;
@@ -29,9 +43,9 @@
         font-size: 10vmin;
     }
     #lisk2 {
-        height: 15vmax;
-        width: 13vmax;
-        top: -55vmax;
+        height: 15vmin;
+        width: 13vmin;
+        top: -55vmin;
         left: 15px;
     }
     #creator img {
@@ -41,19 +55,33 @@
 }
 
 @media only screen and (min-width: 601px) {
+    nav i {
+        margin-left: -10vmin;
+    }
+    nav a:link, #title h1, #title h2 {
+        color: #000000;
+    }
+    #title h1, #title h2 {
+        text-align: center;
+    }
     #title h1 {
         font-size: 15vmin;
-        text-align: center;
+        margin-top: -2vmin;
     }
     #title h2 {
         font-size: 10vmin;
-        text-align: center;
+    }
+    #title-img {
+        opacity: 0.7;
     }
     #about p {
         font-size: 2.5vmin;
     }
-    .quote h2, cite {
-        font-size: 7vmin;
+    .quote h2 {
+        font-size: 4vmax;
+    }
+    cite {
+        font-size: 2vmax;
     }
     .inner-text {
         font-size: 3vmax;
@@ -70,10 +98,10 @@
         font-size: 2.8vmin;
     }
     #lisk2 {
-        height: 5vmax;
-        width: 4vmax;
-        top: -130px;
-        left: 5px;
+        height: 5vmin;
+        width: 4vmin;
+        top: -16vmin;
+        left: 0.8vmin;
     }
     #creator img {
         height: 8vmin;
@@ -85,47 +113,64 @@
 @media screen and (min-width: 768px) {
     #title h1 {
         font-size: 13vmin;
-        text-align: center;
     }
     #title h2 {
         font-size: 7vmin;
-        text-align: center;
     }
-    .quote h2, cite {
+    .quote h2 {
         font-size: 6vmin;
     }
+    cite {
+        font-size: 4vmin;
+    }
     .inner-text {
-        font-size: 5vmax;
-        top: -17vw;
+        top: -15vw;
     }
     .inner-spacing {
-        margin-right: 20vw;
+        margin-right: 22.5vw;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .selected {
-      position: fixed;
-      width: 70vmax;
+        position: fixed;
+        width: 70vmax;
+    }
+    nav i {
+        margin-left: -30vmin;
+    }
+    nav a:link {
+        color: #b0bec5;
     }
     #title h1 {
+        color: #b0bec5;
+        font-size: 10vmin;
         text-align: left;
+        margin-top: 50px;
+        margin-left: -100px;
     }
     #title h2 {
+        color: #b0bec5;
         text-align: right;
+        position: relative;
+        right: -100px;
+    }
+    #title-img {
+        opacity: 1;
     }
     .quote h2 {
-        margin-top: 12vmin;
+        font-size: 5vmin;
+        margin-top: 10vmin;
     }
-    .quote h2, cite {
-        font-size: 7vmin;
+    cite {
+        font-size: 3vmin;
     }
     .inner-text {
-        left: 8vw;
-        top: -15vmax;
+        left: 15vmin;
+        top: -24vmin;
     }
     .inner-spacing {
-        margin-right: 16vw;
+        margin-right: 30vmin;
     }
     #links p {
         font-size: 3vmin;
@@ -134,10 +179,13 @@
         font-size: 3.8vmin;
     }
     #lisk2 {
-        height: 50px;
-        width: 40px;
-        top: -22vh;
-        left: 3px;
+      height: 4vmax;
+      width: 3vmax;
+      top: -22vh;
+      left: 10px;
+    }
+    #creator img {
+        margin-bottom: -3vmin;
     }
 }
 
@@ -151,26 +199,14 @@
     #about p {
         font-size: 1.8vmin;
     }
-    .quote h2 {
-        margin-top: 10vmin;
-    }
-    .quote h2, cite {
-        font-size: 5vmin;
+    .inner-text {
+        top: -14vmax;
     }
     .inner-spacing {
-        margin-right: 15vw;
+        margin-right: 32vmin;
     }
     #footer-social {
         float: right;
-    }
-    #lisk2 {
-        height: 4vmax;
-        width: 3vmax;
-        top: -22vh;
-        left: 10px;
-    }
-    #creator img {
-        margin-bottom: -3vmin;
     }
 }
 
@@ -182,12 +218,12 @@
         font-size: 6vmin;
     }
     .inner-text {
-        font-size: 4vmax;
+        font-size: 3vmax;
         left: 5vw;
-        top: -11.5vmax;
+        top: -11vmax;
     }
     .inner-spacing {
-        margin-right: 11vw;
+        margin-right: 11.5vw;
     }
     #links p {
         font-size: 2.5vmin;
@@ -205,7 +241,7 @@ body {
     color: inherit;
 }
 
-#title h1, #title h2, nav a:link, footer {
+footer {
     color: #b0bec5;
 }
 
@@ -215,21 +251,17 @@ body {
 }
 
 .navbar-fixed nav {
-  position: static;
+    position: static;
 }
 
 .scroll-change {
-  background-color: #000000;
-  color: #eceff1;
+    background-color: #000000;
+    color: #eceff1;
 }
 
 nav ul li:hover {
-  background-color: #eceff1;
-  color: #000000;
-}
-
-nav i {
-    margin-left: -30vmin;
+    background-color: #eceff1;
+    color: #000000;
 }
 
 #normal-nav li {
@@ -278,14 +310,13 @@ nav i {
     position: relative;
 }
 
-.tablesorter-materialize thead th,
-.tablesorter-materialize tfoot th{
+.tablesorter-materialize thead th, .tablesorter-materialize tfoot th {
     background-color: #263238;
     color: #eceff1;
 }
 
 select {
-  color: #000000;
+    color: #000000;
 }
 
 #projects .card {

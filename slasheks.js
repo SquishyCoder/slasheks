@@ -1,11 +1,11 @@
 $(document).ready(function() {
   $(window).scroll(function() {
     if ($(".selected").offset().top > 400) {
-      $(".selected").addClass("scroll-change");
-      $("#normal-nav li").css("border", "1px solid #eceff1");
+      $("nav").removeClass("transparent");
+      $("#normal-nav li").css("border", "1px solid #eceff1").addClass("scroll-change");
     } else {
-      $(".selected").removeClass("scroll-change");
-      $("#normal-nav li").css("border", "");
+      $("nav").addClass("transparent");
+      $("#normal-nav li").css("border", "").removeClass("scroll-change");
     }
   });
 
