@@ -38,7 +38,8 @@ function retrieveInfo() {
         continue;
       } else {
         var d = new Date((transactions[i].timestamp + 1464109200)*1000);
-        var date = d.toDateString();
+        var options = {month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric'};
+        var date = d.toLocaleString('en-US', options);
 
         data.push([transactions[i].senderId, transactions[i].recipientId, transactions[i].amount, transactions[i].id, date]);
       }
@@ -65,6 +66,8 @@ function displayData() {
     $("tbody").append(row);
   }
   setTimeout(function() {
+    //Using tablesorter jquery plugin -- materializecss theme: https://github.com/Mottie/tablesorter
+
     $("table").tablesorter({
     theme : "materialize",
 
@@ -77,6 +80,12 @@ function displayData() {
       filter_reset : ".reset",
 
       filter_cssFilter: ["", "", "browser-default"]
+    },
+
+    dateFormat: "mmddyyyy",
+
+    headers: {
+      6: {sorter: "shortDate"}
     }
   })
   .tablesorterPager({
