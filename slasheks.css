@@ -134,7 +134,7 @@
 @media screen and (min-width: 1024px) {
     .selected {
         position: fixed;
-        width: 70vmax;
+        width: 65vmax;
     }
     nav i {
         margin-left: -30vmin;
@@ -313,6 +313,10 @@ nav ul li:hover {
 .tablesorter-materialize thead th, .tablesorter-materialize tfoot th {
     background-color: #263238;
     color: #eceff1;
+}
+
+table a:link {
+    color: #006064;
 }
 
 select {

@@ -12,7 +12,6 @@ $(document).ready(function() {
   retrieveInfo();
 });
 
-
 var data = [];
 
 var addressHash = {
@@ -53,13 +52,17 @@ function retrieveInfo() {
 
 function displayData() {
   for (var t = 0; t < data.length; t++) {
+    var linkAddFrom = $("<a></a>").attr({"href":"https://explorer.lisknode.io/address/" + data[t][0], "target": "_blank"}).text(data[t][0]);
+    var linkAddTo = $("<a></a>").attr({"href":"https://explorer.lisknode.io/address/" + data[t][1], "target": "_blank"}).text(data[t][1]);
+    var linkTrans= $("<a></a>").attr({"href":"https://explorer.lisk.io/tx/" + data[t][3], "target": "_blank"}).text(data[t][3]);
+
     var row = $("<tr></tr>");
-    var from = $("<td></td>").text(data[t][0]);
+    var from = $("<td></td>").html(linkAddFrom);
     var fname = $("<td></td>").text(addressHash[data[t][0]]);
-    var to = $("<td></td>").text(data[t][1]);
+    var to = $("<td></td>").html(linkAddTo);
     var toName = $("<td></td>").text(addressHash[data[t][1]]);
     var amount = $("<td></td>").text(data[t][2]/100000000);
-    var id = $("<td></td>").text(data[t][3]);
+    var id = $("<td></td>").html(linkTrans);
     var date = $("<td></td>").text(data[t][4]);
 
     row.append(from, fname, to, toName, amount, id, date);
