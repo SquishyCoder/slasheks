@@ -9,8 +9,160 @@ $(document).ready(function() {
     }
   });
 
-  retrieveInfo();
+  $(".button-collapse").sideNav();
+
+  $(".parallax").parallax();
+
+  checkAPI();
 });
+
+var i = 0;
+var mainLink1;
+var mainLink2;
+var links1 = ["https://login.lisk.io/api/delegates/get?username=slasheks", "https://wallet.lisknode.io/api/delegates/get?username=slasheks", "https://lisk-login.vipertkd.com/api/delegates/get?username=slasheks", "https://01.lskwallet.space/api/delegates/get?username=slasheks", "https://02.lskwallet.space/api/delegates/get?username=slasheks"];
+var links2 = ["https://login.lisk.io/api/transactions", "https://wallet.lisknode.io/api/transactions", "https://lisk-login.vipertkd.com/api/transactions", "https://01.lskwallet.space/api/transactions", "https://02.lskwallet.space/api/transactions"];
+
+function checkAPI() {
+  var promise = $.getJSON(links2[i]);
+
+  promise.done(function() {
+    mainLink1 = links1[i];
+    mainLink2 = links2[i];
+
+    delegateData();
+    retrieveInfo();
+  });
+
+  promise.fail(function() {
+    if (i === 4) {
+      var notice = $("<h2></h2>").text("Data is not available at this time.");
+      $("#stats h1").append(notice);
+    } else {
+      i+=1;
+      checkAPI();
+    }
+  });
+}
+
+var productivity;
+var approval;
+var pBlocks;
+var mBlocks;
+
+function delegateData() {
+  $.getJSON(mainLink1, function(info) {
+    productivity = info.delegate.productivity;
+    approval = info.delegate.approval;
+    pBlocks = info.delegate.producedblocks;
+    mBlocks = info.delegate.missedblocks;
+  });
+
+  setTimeout(function() {
+    displayCharts();
+  }, 1000);
+}
+
+/*http://jsfiddle.net/s9tu1c9y/*/
+
+function displayCharts() {
+  var ctx1 = document.getElementById("productivity").getContext("2d");
+  var ctx2 = document.getElementById("approval");
+  var ctx3 = document.getElementById("blocks");
+
+  var data1 = {
+    labels: ["Productivity", "Remaining %"],
+    datasets: [{
+        data: [productivity, (100 - productivity)],
+        backgroundColor: [
+          "#37474f",
+          "#212121"
+        ],
+        hoverBackgroundColor: [
+          "#546e7a",
+          "#212121"
+        ]
+      }
+    ]
+  }
+
+  var data2 = {
+    type: "doughnut",
+    labels: ["Approval", "Remaining %"],
+    datasets: [{
+        data: [approval, (100 - approval)],
+        backgroundColor: [
+          "#37474f",
+          "#212121"
+        ],
+        hoverBackgroundColor: [
+          "#546e7a",
+          "#212121"
+        ]
+      }
+    ]
+  }
+
+  var data3 = {
+    labels: ["Produced Blocks", "Missed Blocks"],
+    datasets: [{
+        data: [pBlocks, mBlocks],
+        backgroundColor: [
+          "#37474f",
+          "#212121"
+        ],
+        hoverBackgroundColor: [
+          "#546e7a",
+          "#212121"
+        ]
+      }
+    ]
+  }
+
+
+
+  var productivityChart = new Chart(ctx1, {
+    type: "doughnut",
+    data: data1,
+    options: {
+      cutoutPercentage: 70,
+      animation: {
+        animateScale: true
+        }
+      }
+    });
+
+  var approvalChart = new Chart(ctx2, {
+    type: "doughnut",
+    data: data2,
+    options: {
+      cutoutPercentage: 70,
+      animation: {
+        animateScale: true
+      }
+    }
+  });
+
+  var blocksChart = new Chart(ctx3, {
+    type: "doughnut",
+    data: data3,
+    options: {
+      cutoutPercentage: 70,
+      animation: {
+        animateScale: true
+      }
+    }
+  });
+
+  setTimeout(function() {
+    var prodMath = String(Math.round(productivity)) + "%";
+    var appMath = String(Math.round(approval)) + "%";
+    $("#prodInner").append(prodMath);
+    $("#approvalInner").append(appMath);
+    $("#blocksInner").append(String(pBlocks));
+
+  }, 1000);
+}
+
 
 var data = [];
 
@@ -29,7 +181,7 @@ function retrieveInfo() {
 
   for (var x = 0; x < urls.length; x++) {
 
-  $.get("https://login.lisk.io/api/transactions" + urls[x], function(info) {
+  $.getJSON(mainLink2 + urls[x], function(info) {
     var transactions = info.transactions;
 
     for (var i = 0; i < transactions.length; i++) {
@@ -102,5 +254,7 @@ function displayData() {
     output: '{startRow} - {endRow} / {filteredRows} ({totalRows})'
 
   });
+
+  $("#myTable").tablesorter();
   }, 1000);
 }
