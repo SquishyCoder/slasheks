@@ -222,6 +222,7 @@ function displayData() {
   }
   setTimeout(function() {
     //Using tablesorter jquery plugin -- materializecss theme: https://github.com/Mottie/tablesorter
+    $("#myTable").tablesorter();
 
     $("table").tablesorter({
     theme : "materialize",
@@ -254,7 +255,5 @@ function displayData() {
     output: '{startRow} - {endRow} / {filteredRows} ({totalRows})'
 
   });
-
-  $("#myTable").tablesorter();
   }, 1000);
 }

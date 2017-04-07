@@ -181,7 +181,7 @@
     #lisk2 {
       height: 4vmax;
       width: 3vmax;
-      top: -22vh;
+      top: -22vmin;
       left: 10px;
     }
     #creator img {
@@ -213,9 +213,19 @@
 @media screen and (min-width: 2560px) {
     #title h1 {
         font-size: 8vmin;
+        margin-top: 20px;
+        margin-left: -200px;
     }
     #title h2 {
         font-size: 6vmin;
+        margin-top: 20px;
+        right: -200px;
+    }
+    #about p {
+        font-size: 1.5vmin;
+    }
+    .quote h2 {
+        margin-top: 5vmin;
     }
     .inner-text {
         font-size: 3vmax;
@@ -225,9 +235,69 @@
     .inner-spacing {
         margin-right: 11.5vw;
     }
-    #links p {
+    #links p, #footer-social li {
         font-size: 2.5vmin;
     }
+    #lisk2 {
+        height: 3vmax;
+        width: 2vmax;
+        top: -16vmin;
+        left: 3.5vmin;
+    }
+}
+
+@media screen and (min-width: 3840px) {
+  .selected {
+      width: 40vmax;
+  }
+  #title h1 {
+      font-size: 5vmin;
+      margin-top: 40px;
+      margin-left: -300px;
+  }
+  #title h2 {
+      font-size: 4vmin;
+      margin-top: 20px;
+      right: -400px;
+  }
+  #social-row {
+    position: relative;
+    top: -20px;
+  }
+  #about p {
+      font-size: 1vmin;
+  }
+  .quote h2 {
+      font-size: 3vmin;
+  }
+  cite {
+      font-size: 2vmin;
+  }
+  .inner-text {
+      font-size: 3vmin;
+      left: 7vmin;
+      top: -12vmin;
+  }
+  .inner-spacing {
+      margin-right: 14vmin;
+  }
+  #footer-social li{
+    position: relative;
+    top: -2vmin;
+    left: -10vmin;
+  }
+  #links p, #footer-social li {
+      font-size: 1.3vmin;
+  }
+  #lisk2 {
+      height: 3vmin;
+      width: 2vmin;
+      top: -12.5vmin;
+      left: -4.3vmin;
+  }
+  #creator img {
+      margin-bottom: -1.5vmin;
+  }
 }
 
 body {
